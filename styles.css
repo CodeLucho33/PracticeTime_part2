@@ -40,6 +40,14 @@ margin: 50px auto;
     padding: 5px 10px;
     border-radius: 10px;
 }
+#passOut1:hover{
+    background-color: grey;
+   
+}
+#passOut2:hover{
+    background-color: grey;
+   
+}
 button{ 
     background-color: var(--col1) ;
     color: var(--col4);
