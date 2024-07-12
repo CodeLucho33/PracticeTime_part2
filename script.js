@@ -8,8 +8,17 @@ const characters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
 
 let passOut1El = document.getElementById('passOut1')
 let passOut2El = document.getElementById('passOut2')
+let pasSize =selectSize()
+
+function selectSize(){
+    var selectSizeEl = document.getElementById('selectSize-el').value
+   console.log(selectSizeEl)
+}
+
+
 
 function generatePassword() {
+   
     passOut1El.textContent= ''
     passOut2El.textContent= ''
 for(let i =0; i<15;i++){
