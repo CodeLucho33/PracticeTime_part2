@@ -8,17 +8,15 @@ const characters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
 
 let passOut1El = document.getElementById('passOut1')
 let passOut2El = document.getElementById('passOut2')
-let pasSize =selectSize()
+
 
 function selectSize(){
-    var selectSizeEl = document.getElementById('selectSize-el').value
-   console.log(selectSizeEl)
+   var selectSizeEl = document.getElementById('selectSize-el').value
+
+generatePassword(selectSizeEl)
 }
 
-
-
-function generatePassword() {
-   
+function passwordByDefault(){
     passOut1El.textContent= ''
     passOut2El.textContent= ''
 for(let i =0; i<15;i++){
@@ -30,6 +28,20 @@ for(let i =0; i<15;i++){
     passOut2El.textContent+= characters[Math.floor(Math.random()*characters.length)]
     }
     
+}
 
 
+function generatePassword(selectSizeEl) {
+   
+    passOut1El.textContent= ''
+    passOut2El.textContent= ''
+for(let i =0; i<selectSizeEl;i++){
+    
+passOut1El.textContent+= characters[Math.floor(Math.random()*characters.length)]
+}
+for(let i =0; i<selectSizeEl;i++){
+    
+    passOut2El.textContent+= characters[Math.floor(Math.random()*characters.length)]
+    }
+    
 }

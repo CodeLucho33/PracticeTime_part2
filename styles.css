@@ -19,7 +19,10 @@ color: var(--col1);
 margin: 50px auto;
 
 }
-
+.mainConteinerA{
+    display: flex;
+    flex-direction: column;
+}
 .mainConteinerB{
     width: 420px;
     
