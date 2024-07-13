@@ -12,8 +12,9 @@ let passOut2El = document.getElementById('passOut2')
 
 function selectSize(){
    var selectSizeEl = document.getElementById('selectSize-el').value
-
-generatePassword(selectSizeEl)
+if(selectSizeEl != null){
+    generatePassword(selectSizeEl)
+}
 }
 
 function passwordByDefault(){
@@ -44,4 +45,27 @@ for(let i =0; i<selectSizeEl;i++){
     passOut2El.textContent+= characters[Math.floor(Math.random()*characters.length)]
     }
     
+}
+
+function copyPass1(){
+    
+// Get the text field
+var copyText = document.getElementById('passOut1').textContent
+// select the tect field
+
+// Copy the text inside the text field
+navigator.clipboard.writeText(copyText);
+//Alert the copued text
+alert("Copied the Password: "+ copyText);
+}
+
+function copyPass2(){
+    // Get the text field
+var copyText2 = document.getElementById('passOut2').textContent
+// select the tect field
+
+// Copy the text inside the text field
+navigator.clipboard.writeText(copyText2);
+//Alert the copued text
+alert("Copied the Password: "+ copyText2);
 }
